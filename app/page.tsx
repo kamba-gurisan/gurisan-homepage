@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const HCD_URL = 'https://hcd.gurisanws.com'
+const HCD_LP = 'https://www.gurisanws.com/hcd-studio'
 
 export default function Home() {
   return (
@@ -80,7 +81,7 @@ export default function Home() {
                   お問い合わせ
                 </a>
               </div>
-              <a href="https://hcd.gurisanws.com"
+              <a href={HCD_LP}
                  className="inline-flex items-center gap-3 mt-5 px-5 py-3 bg-white/10 border border-white/20 rounded-xl hover:bg-white/20 transition-colors w-fit">
                 <span className="text-lg">🤖</span>
                 <div className="text-left">
@@ -217,7 +218,7 @@ export default function Home() {
                   ))}
                 </div>
                 <a
-                  href="https://hcd.gurisanws.com"
+                  href={HCD_LP}
                   className="inline-flex items-center gap-2 px-8 py-3.5 bg-green-500 text-white font-bold rounded-xl hover:bg-green-400 transition-colors shadow-lg shadow-green-900/50"
                 >
                   無料で始める →
