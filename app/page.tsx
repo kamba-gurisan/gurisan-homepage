@@ -229,7 +229,7 @@ export default function Home() {
                 {[
                   { name: 'Free', price: '¥0', desc: 'プロジェクト2件・回答20件まで' },
                   { name: 'Pro', price: '¥2,980/月', desc: 'プロジェクト10件・回答200件まで' },
-                  { name: 'Team', price: '¥9,800/月', desc: 'プロジェクト30件・チーム5名' },
+                  { name: 'Team', price: '¥9,800/月', desc: 'プロジェクト30件・回答1,000件まで・チーム5名' },
                 ].map((plan) => (
                   <div key={plan.name} className="flex items-center justify-between border-b border-white/10 pb-3 last:border-0 last:pb-0">
                     <div>
