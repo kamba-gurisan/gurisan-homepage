@@ -261,8 +261,8 @@ export default function HCDStudioPage() {
                 <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span>月{PLAN_LIMITS.team.max_interviews}件のプロジェクト</li>
                 <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span>最大{PLAN_LIMITS.team.max_questions}設問 / {PLAN_LIMITS.team.max_sessions}セッション</li>
                 <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span>Proの全機能</li>
-                <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span>チームメンバー{PLAN_LIMITS.team.team_members}名</li>
-                <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span>カスタムガイド設定</li>
+                <li className="flex items-center gap-2"><span className="text-green-500 mt-0.5">✓</span>チームメンバー{PLAN_LIMITS.team.team_members}名<span className="text-xs bg-amber-100 text-amber-600 px-1.5 py-0.5 rounded font-medium">準備中</span></li>
+                <li className="flex items-center gap-2"><span className="text-green-500 mt-0.5">✓</span>カスタムガイド設定<span className="text-xs bg-amber-100 text-amber-600 px-1.5 py-0.5 rounded font-medium">準備中</span></li>
               </ul>
               <a href={`${HCD_URL}/pricing`} className="block w-full text-center py-2.5 rounded-xl border border-slate-200 text-slate-700 text-sm font-medium hover:bg-slate-50 transition-colors">
                 詳細を見る
