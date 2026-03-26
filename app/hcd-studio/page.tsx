@@ -1,5 +1,28 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'HCD Studio | AIインタビュー × KA法 × UXリサーチ自動化ツール',
+  description: 'HCD StudioはAIを活用したUXリサーチプラットフォームです。インタビュー設計・AI収集・KA法分析・ペルソナ生成・カスタマージャーニーマップまで、HCDリサーチのフルサイクルをひとつのツールで実現。Gemini搭載で定性分析を数分に短縮。',
+  keywords: ['HCD', 'UXリサーチ', 'AIインタビュー', 'KA法', 'ペルソナ生成', 'カスタマージャーニーマップ', '定性分析', 'ユーザーインタビュー', 'HCDツール', 'デザインリサーチ', 'ワークショップ'],
+  openGraph: {
+    title: 'HCD Studio | AIインタビュー × KA法 × UXリサーチ自動化ツール',
+    description: 'AIを活用したHCDリサーチプラットフォーム。インタビュー設計からKA法・ペルソナ・ジャーニーマップまで自動生成。Gemini搭載で定性分析を数分に短縮。',
+    url: 'https://www.gurisanws.com/hcd-studio',
+    siteName: 'GURISAN',
+    locale: 'ja_JP',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'HCD Studio | AIインタビュー × KA法 × UXリサーチ自動化ツール',
+    description: 'AIを活用したHCDリサーチプラットフォーム。インタビュー設計からKA法・ペルソナ・ジャーニーマップまで自動生成。',
+  },
+  alternates: {
+    canonical: 'https://www.gurisanws.com/hcd-studio',
+  },
+}
 
 const HCD_URL = 'https://hcd.gurisanws.com'
 
