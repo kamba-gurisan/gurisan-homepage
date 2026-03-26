@@ -58,7 +58,7 @@ export default function Home() {
               <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">
                 その学び、<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-300">
-                  次に繋がって<br />いますか？
+                  次につながって<br />いますか？
                 </span>
               </h1>
               <p className="text-green-100 leading-relaxed mb-4">
@@ -298,10 +298,10 @@ export default function Home() {
               <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
                 <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Career</p>
                 <p className="text-sm text-slate-600 leading-loose">
-                  東芝テック、サムスン日本研究所、日本HPなど、日米韓のグローバルテック企業で約30年間勤務。
+                  日米韓のグローバルテック企業で約30年間勤務。
                   キャリアのスタートはプリンター用のトナー開発（ハードウェア技術者）。開発現場で
-                  「交換時に手が汚れる」というユーザーの不満に直面した原体験から、UXと人間中心設計（HCD）の重要性に目覚める。<br /><br />
-                  商品企画・技術コンサルティング・未来戦略策定・リーン製品開発導入・技術者教育などを歴任し、2023年に独立。
+                  「交換時に手が汚れる」というユーザーの不満に直面した原体験から、UXと人間中心設計（HCD）の重要性に目覚める。
+                  商品企画・技術コンサルティング・未来戦略策定・リーン製品開発導入・技術者教育などを歴任し、2023年に独立。<br /><br />
                   現在は津田塾大学・東京都立産業技術大学院大学などで非常勤講師、学会の企画委員も務める。
                 </p>
               </div>
