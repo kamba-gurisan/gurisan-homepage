@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.gurisanws.com",
   },
+  icons: {
+    icon: "/gurisanta.png",
+    apple: "/gurisanta.png",
+  },
 };
 
 export default function RootLayout({
