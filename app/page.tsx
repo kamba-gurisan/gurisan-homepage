@@ -80,6 +80,14 @@ export default function Home() {
                   お問い合わせ
                 </a>
               </div>
+              <a href="https://hcd.gurisanws.com"
+                 className="inline-flex items-center gap-3 mt-5 px-5 py-3 bg-white/10 border border-white/20 rounded-xl hover:bg-white/20 transition-colors w-fit">
+                <span className="text-lg">🤖</span>
+                <div className="text-left">
+                  <div className="text-white font-bold text-sm">HCD Studio</div>
+                  <div className="text-green-200 text-xs">AIでHCDリサーチを加速 — 無料で試す →</div>
+                </div>
+              </a>
             </div>
 
             <div className="flex justify-center md:justify-end items-end">
@@ -174,6 +182,64 @@ export default function Home() {
                 <p className="text-sm text-slate-400 leading-relaxed">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── HCD Studio ── */}
+      <section id="hcd-studio" className="py-20 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-center text-xs font-bold text-green-600 uppercase tracking-widest mb-3">Product</p>
+          <h2 className="text-3xl font-bold text-slate-800 text-center mb-4">HCD Studio</h2>
+          <p className="text-center text-slate-500 mb-12 max-w-2xl mx-auto">
+            HCDリサーチのフルサイクルをAIで一気通貫にサポートするプラットフォーム。<br />
+            インタビュー設計からKA法・ペルソナ生成まで、分析が数分で完了します。
+          </p>
+          <div className="bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 rounded-3xl p-8 sm:p-10 text-white overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-green-400/10 blur-3xl pointer-events-none" />
+            <div className="grid sm:grid-cols-2 gap-8 items-center relative">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-300 text-xs font-bold px-3 py-1 rounded-full mb-6">
+                  🆓 無料プランあり
+                </div>
+                <div className="space-y-3 mb-8">
+                  {[
+                    { icon: '🎙️', text: 'AIが自動で深掘りインタビュー' },
+                    { icon: '🗂️', text: 'KA法・アフィニティダイアグラム自動生成' },
+                    { icon: '👤', text: 'ペルソナ・CJM・JTBD自動生成' },
+                    { icon: '📊', text: '定量×定性を一画面で分析' },
+                    { icon: '📁', text: 'Excel / Wordエクスポート対応' },
+                  ].map((item) => (
+                    <div key={item.text} className="flex items-center gap-3 text-sm text-green-100">
+                      <span className="text-base">{item.icon}</span>
+                      <span>{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+                <a
+                  href="https://hcd.gurisanws.com"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-green-500 text-white font-bold rounded-xl hover:bg-green-400 transition-colors shadow-lg shadow-green-900/50"
+                >
+                  無料で始める →
+                </a>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-4">
+                <p className="text-xs font-bold text-green-400 uppercase tracking-widest">Plan</p>
+                {[
+                  { name: 'Free', price: '¥0', desc: 'プロジェクト2件・回答20件まで' },
+                  { name: 'Pro', price: '¥2,980/月', desc: 'プロジェクト10件・回答200件まで' },
+                  { name: 'Team', price: '¥9,800/月', desc: 'プロジェクト30件・チーム5名' },
+                ].map((plan) => (
+                  <div key={plan.name} className="flex items-center justify-between border-b border-white/10 pb-3 last:border-0 last:pb-0">
+                    <div>
+                      <div className="font-bold text-white text-sm">{plan.name}</div>
+                      <div className="text-green-200 text-xs">{plan.desc}</div>
+                    </div>
+                    <div className="text-green-300 font-bold text-sm">{plan.price}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
