@@ -214,7 +214,7 @@ export default function HCDStudioPage() {
             </div>
 
             <div className="rounded-2xl border-2 border-indigo-500 p-6 relative shadow-lg shadow-indigo-100">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-indigo-600 text-white text-xs font-bold rounded-full">人気</div>
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-indigo-600 text-white text-xs font-bold rounded-full">おすすめ</div>
               <p className="text-xs font-bold text-indigo-500 uppercase tracking-wider mb-2">PRO</p>
               <p className="text-3xl font-bold text-slate-800 mb-1">¥{PRO_PRICE.toLocaleString()}<span className="text-base font-normal text-slate-500">/月</span></p>
               <p className="text-xs text-slate-400 mb-6">いつでもキャンセル可</p>
