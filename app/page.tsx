@@ -39,10 +39,10 @@ export default function Home() {
             <div className="pb-16 pt-4">
               <div className="mb-8">
                 <Image
-                  src="/Gurisan_Workshop_HCD_AI_trans.png"
-                  alt="GURISAN Workshop Design × HCD × AI"
+                  src="/gurisan-workshop-logo.png"
+                  alt="グリサン Workshop Design × HCD × AI"
                   width={360}
-                  height={90}
+                  height={110}
                   className="object-contain brightness-0 invert"
                   priority
                 />
