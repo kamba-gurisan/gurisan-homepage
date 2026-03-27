@@ -43,7 +43,7 @@ export default function Home() {
                   alt="GURISAN Workshop Design × HCD × AI"
                   width={360}
                   height={90}
-                  className="object-contain"
+                  className="object-contain brightness-0 invert"
                   priority
                 />
               </div>
