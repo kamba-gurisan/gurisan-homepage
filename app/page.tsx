@@ -17,11 +17,11 @@ export default function Home() {
             <span className="text-xs text-slate-400 hidden sm:block">/ グリサン</span>
           </div>
           <nav className="flex items-center gap-5 text-sm text-slate-500">
-            <a href="#services" className="hidden sm:block hover:text-green-700 transition-colors">サービス</a>
-            <a href="#about"    className="hidden sm:block hover:text-green-700 transition-colors">グリサンについて</a>
+            <a href="#services"     className="hidden sm:block hover:text-green-700 transition-colors">サービス</a>
+            <a href="#about"        className="hidden sm:block hover:text-green-700 transition-colors">グリサンについて</a>
             <a href="#achievements" className="hidden sm:block hover:text-green-700 transition-colors">実績</a>
-            <a href="#tools"    className="hidden sm:block hover:text-green-700 transition-colors">ツール</a>
-            <a href="#contact"  className="px-4 py-1.5 rounded-lg bg-green-700 text-white font-medium hover:bg-green-600 transition-colors">
+            <a href="#hcd-studio"   className="hidden sm:block hover:text-green-700 transition-colors">ツール</a>
+            <a href="#contact"      className="px-4 py-1.5 rounded-lg bg-green-700 text-white font-medium hover:bg-green-600 transition-colors">
               お問い合わせ
             </a>
           </nav>
@@ -119,7 +119,7 @@ export default function Home() {
               ワークショップや研修が「楽しかった」「ためになった」という一過性のイベントで終わっていませんか？<br /><br />
               グリサン（Gurisan）は、コミュニケーションの場創りの専門家として、参加者が深い「腹落ち感」を得て、
               翌日からの持続的な行動変容につながる場をデザインします。<br /><br />
-              私たちが目指すのは、「参加者の満足」「依頼者の課題解決」「社会への貢献」、そして「提供者自身の成長」が重なり合う
+              私たちが目指すのは、「参加者の満足」「依頼者の課題解決」「社会への貢献」、そして「提供者自身の成長」が重なり合う場づくりです。
             </p>
             <div className="mt-6 bg-white rounded-2xl border border-green-100 shadow-sm p-6">
               <p className="text-center text-xs font-bold text-green-600 uppercase tracking-widest mb-1">コンセプト</p>
@@ -150,7 +150,7 @@ export default function Home() {
                 <text x="220" y="312" textAnchor="middle" fill="#bae6fd" fontSize="10" fontWeight="600">世間</text>
                 <text x="220" y="336" textAnchor="middle" fill="white" fontSize="16" fontWeight="700">社会</text>
               </svg>
-              <p className="text-center text-xs text-slate-400 mt-3">4つのステークホルダーが共に満たされる場を設計します</p>
+              <p className="text-center text-xs text-slate-400 mt-3">全員が「これよかった」と言える場を、一緒に作りましょう。</p>
             </div>
             <p className="text-slate-600 leading-loose mt-4">
               企業の人材育成や組織変革から、大学でのアクティブラーニング、自治体の地域共創まで。
@@ -165,7 +165,7 @@ export default function Home() {
       <section className="py-20 px-6 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-5xl mx-auto">
           <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">GURISAN × AI</p>
-          <h2 className="text-3xl font-bold text-white text-center mb-4">AIを、武器にする。</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-4">AIを、思考のパートナーに。</h2>
           <p className="text-center text-slate-400 mb-14 max-w-xl mx-auto">
             グリサンは生成AIを「使う側」ではなく「設計する側」として活動しています。<br className="hidden sm:block" />
             ワークショップ・リサーチ・プロダクト開発、すべての領域でAIを実践的に統合。
@@ -174,7 +174,7 @@ export default function Home() {
             {[
               { icon: '🎯', title: 'AIでワークショップを設計する', desc: 'シナリオプランニング・未来洞察・アイデア創出など、ワークショップのプログラムや「問い」の設計にAIを活用。参加者の気づきを最大化するファシリテーションを実現します。', tag: 'Workshop × AI' },
               { icon: '🔬', title: 'AIでリサーチを洞察に変える', desc: 'HCD Studioを使えば、インタビューデータがペルソナ・KA法・機会領域マップへと即座に変換。定性と定量を統合したAI分析で、意思決定の根拠を素早く構築します。', tag: 'HCD × AI' },
-              { icon: '🛠️', title: 'AIでプロダクトを開発する', desc: 'HCD Studio自体が「Vibe Coding」—コードを書かずにAIと対話しながら開発したプロダクトです。AI活用の最前線を自ら実践し、クライアントへの知見として還元します。', tag: 'Vibe Coding' },
+              { icon: '🛠️', title: 'AIでプロダクトを開発する', desc: 'HCD Studio自体が「Vibe Coding」の産物—コードを書かずにAIと対話しながら開発したプロダクトです。自ら実践した経験をそのままクライアントへの知見として還元します。', tag: 'Vibe Coding' },
             ].map((s) => (
               <div key={s.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
                 <div className="text-3xl mb-4">{s.icon}</div>
@@ -190,11 +190,11 @@ export default function Home() {
       {/* ── HCD Studio ── */}
       <section id="hcd-studio" className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
-          <p className="text-center text-xs font-bold text-green-600 uppercase tracking-widest mb-3">Product</p>
+          <p className="text-center text-xs font-bold text-green-600 uppercase tracking-widest mb-3">Tool</p>
           <h2 className="text-3xl font-bold text-slate-800 text-center mb-4">HCD Studio</h2>
           <p className="text-center text-slate-500 mb-12 max-w-2xl mx-auto">
-            HCDリサーチのフルサイクルをAIで一気通貫にサポートするプラットフォーム。<br />
-            インタビュー設計からKA法・ペルソナ生成まで、分析が数分で完了します。
+            HCDの実践知から生まれた、AIリサーチプラットフォーム。<br />
+            インタビュー設計からKA法・ペルソナ生成まで、数時間の作業が数分で完了します。
           </p>
           <div className="bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 rounded-3xl p-8 sm:p-10 text-white overflow-hidden relative">
             <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-green-400/10 blur-3xl pointer-events-none" />
@@ -209,7 +209,7 @@ export default function Home() {
                     { icon: '🗂️', text: 'KA法・アフィニティダイアグラム自動生成' },
                     { icon: '👤', text: 'ペルソナ・CJM・JTBD自動生成' },
                     { icon: '📊', text: '定量×定性を一画面で分析' },
-                    { icon: '📁', text: 'Excel / Wordエクスポート対応' },
+                    { icon: '📋', text: 'グラフ・KA・AI分析を統合してレポート出力' },
                   ].map((item) => (
                     <div key={item.text} className="flex items-center gap-3 text-sm text-green-100">
                       <span className="text-base">{item.icon}</span>
@@ -217,26 +217,35 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <a
-                  href={HCD_LP}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-green-500 text-white font-bold rounded-xl hover:bg-green-400 transition-colors shadow-lg shadow-green-900/50"
-                >
-                  無料で始める →
-                </a>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href={`${HCD_URL}/login?mode=signup`}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 text-white font-bold rounded-xl hover:bg-green-400 transition-colors shadow-lg shadow-green-900/50"
+                  >
+                    無料で始める →
+                  </a>
+                  <a
+                    href={HCD_LP}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-white/15 text-white font-medium rounded-xl hover:bg-white/25 transition-colors border border-white/20"
+                  >
+                    機能・詳細を見る
+                  </a>
+                </div>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-4">
-                <p className="text-xs font-bold text-green-400 uppercase tracking-widest">Plan</p>
+                <p className="text-xs font-bold text-green-400 uppercase tracking-widest">できること</p>
                 {[
-                  { name: 'Free', price: '¥0', desc: 'プロジェクト2件・回答20件まで' },
-                  { name: 'Pro', price: '¥2,980/月', desc: 'プロジェクト10件・回答200件まで' },
-                  { name: 'Team', price: '¥9,800/月', desc: 'プロジェクト30件・回答1,000件まで・チーム5名' },
-                ].map((plan) => (
-                  <div key={plan.name} className="flex items-center justify-between border-b border-white/10 pb-3 last:border-0 last:pb-0">
+                  { icon: '🎤', label: 'AIインタビュー', desc: 'URLを共有するだけで自動実施' },
+                  { icon: '🔬', label: 'KA法分析', desc: '価値の種をAIが自動抽出・解説' },
+                  { icon: '🤖', label: 'AI分析 13手法', desc: 'ペルソナ・JTBDなど多角的に分析' },
+                  { icon: '📊', label: '定量×定性統合', desc: 'グラフと定性分析を一画面で' },
+                ].map((f) => (
+                  <div key={f.label} className="flex items-center gap-3 border-b border-white/10 pb-3 last:border-0 last:pb-0">
+                    <span className="text-xl flex-shrink-0">{f.icon}</span>
                     <div>
-                      <div className="font-bold text-white text-sm">{plan.name}</div>
-                      <div className="text-green-200 text-xs">{plan.desc}</div>
+                      <div className="font-bold text-white text-sm">{f.label}</div>
+                      <div className="text-green-200 text-xs">{f.desc}</div>
                     </div>
-                    <div className="text-green-300 font-bold text-sm">{plan.price}</div>
                   </div>
                 ))}
               </div>
@@ -380,7 +389,7 @@ export default function Home() {
                 {[
                   { num: '01', title: '「技術」×「デザイン」×「戦略」の統合力', desc: '製造業の現場KPIや制約を熟知した元エンジニアだからこそ、机上の空論ではない、現場の技術者に刺さる「腹落ち感」のある変革シナリオを描けます。', color: 'border-green-200 bg-green-50/60', num_color: 'text-green-500' },
                   { num: '02', title: '「具体と抽象の往復」を促すファシリテーション', desc: '日々の事象（具体）から本質を見抜き（抽象）、具体的なアクションに落とし込む「思考の体幹」を鍛える場をデザインします。', color: 'border-emerald-200 bg-emerald-50/60', num_color: 'text-emerald-500' },
-                  { num: '03', title: 'AI共創時代の実践者', desc: '自らコードを書かずにAIでアプリ開発（Vibe Coding）を行い、HCD Studioを開発。生成AIをワークショップ設計・ファシリテーション・業務プロセスに統合する、圧倒的な実践知と最前線の経験を持ちます。', color: 'border-green-300 bg-green-100/60 ring-1 ring-green-200', num_color: 'text-green-600' },
+                  { num: '03', title: 'AI共創時代の実践者', desc: '自らコードを書かずにAIでアプリ開発（Vibe Coding）を行い、HCD Studioを開発。自ら実践した経験をそのままクライアントへの知見として還元します。', color: 'border-green-300 bg-green-100/60 ring-1 ring-green-200', num_color: 'text-green-600' },
                 ].map((s) => (
                   <div key={s.num} className={`rounded-2xl p-5 border ${s.color}`}>
                     <div className="flex items-start gap-4">
@@ -419,7 +428,7 @@ export default function Home() {
               { icon: '🌿', title: '学会・地方創生', items: [
                 { org: '日本画像学会', detail: 'カジュアルイベント「Imaging NEXT」立ち上げ・企画・実施（2025年度会長特賞受賞 🏆）' },
                 { org: '鹿児島県大崎町', detail: 'ゴミ分別リサイクル／生成AI活用 住民参加型WS' },
-                { org: 'HCD-Net', detail: 'HCD実践者向けワークショップデザインセミナー' },
+                { org: 'HCD-Net', detail: 'HCD実践者向けワークショップデザインセミナー・研究発表' },
               ]},
             ].map((cat) => (
               <div key={cat.title} className="bg-white rounded-2xl p-6 border border-green-100 shadow-sm">
@@ -450,62 +459,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── HCD Studio ── */}
-      <section id="tools" className="py-24 px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-center text-xs font-bold text-green-500 uppercase tracking-widest mb-3">Tool</p>
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-4">グリサン開発ツール</h2>
-          <p className="text-center text-slate-500 mb-14">HCD × AI の実践知から生まれたAIプロダクト</p>
-          <div className="bg-gradient-to-br from-green-700 to-emerald-800 rounded-2xl p-8 sm:p-10 text-white">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 bg-white/20 rounded-xl flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-xs font-bold text-green-200 uppercase tracking-wider">Now Available</p>
-                <h3 className="font-bold text-white text-xl">HCD Studio</h3>
-              </div>
-            </div>
-            <p className="text-green-100 leading-relaxed mb-6 max-w-2xl">
-              インタビュー設計・AI収集・KA法・ペルソナ・ジャーニーマップまで、HCDリサーチのフルサイクルをひとつのプラットフォームで。
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-              {[
-                { icon: '🎤', label: 'AIインタビュー' },
-                { icon: '🔬', label: 'KA法分析' },
-                { icon: '🤖', label: 'AI分析 13手法' },
-                { icon: '📊', label: '定量×定性統合' },
-              ].map((f) => (
-                <div key={f.label} className="bg-white/10 rounded-xl p-3 text-center">
-                  <div className="text-xl mb-1">{f.icon}</div>
-                  <p className="text-xs text-green-100 font-medium">{f.label}</p>
-                </div>
-              ))}
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <a href={`${HCD_URL}/login?mode=signup`} className="inline-flex items-center gap-2 px-6 py-3 bg-white text-green-700 font-bold rounded-xl hover:bg-green-50 transition-colors">
-                無料で始める →
-              </a>
-              <a href={`${HCD_URL}/pricing`} className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 text-white font-medium rounded-xl hover:bg-white/30 transition-colors">
-                料金プランを見る
-              </a>
-              <Link href="/hcd-studio" className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 text-white font-medium rounded-xl hover:bg-white/30 transition-colors">
-                詳細・機能紹介 →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── お問い合わせ ── */}
       <section id="contact" className="py-24 px-6 bg-green-50">
         <div className="max-w-xl mx-auto text-center">
           <p className="text-xs font-bold text-green-500 uppercase tracking-widest mb-3">Contact</p>
           <h2 className="text-3xl font-bold text-slate-800 mb-4">お問い合わせ</h2>
           <p className="text-slate-500 leading-relaxed mb-10">
-            ワークショップの企画・ご相談、登壇依頼、HCD Studioの導入支援など、<br className="hidden sm:block" />
+            ワークショップの企画・ご相談、登壇依頼、HCD Studioのご活用など、<br className="hidden sm:block" />
             まずはお気軽にご連絡ください。
           </p>
           <a href="mailto:info@gurisanws.com"
@@ -534,7 +494,7 @@ export default function Home() {
             <a href="#services"     className="hover:text-white transition-colors">サービス</a>
             <a href="#about"        className="hover:text-white transition-colors">グリサンについて</a>
             <a href="#achievements" className="hover:text-white transition-colors">実績</a>
-            <a href="#tools"        className="hover:text-white transition-colors">ツール</a>
+            <a href="#hcd-studio"   className="hover:text-white transition-colors">ツール</a>
             <a href="#contact"      className="hover:text-white transition-colors">お問い合わせ</a>
           </div>
           <p className="text-xs text-green-600">© 2026 GURISAN. All Rights Reserved.</p>
