@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'HCD Studio | AIインタビュー × KA法 × UXリサーチ自動化ツール',
@@ -26,15 +25,6 @@ export const metadata: Metadata = {
 
 const HCD_URL = 'https://hcd.gurisanws.com'
 
-// Plan constants (synced with hcd-tools)
-const PRO_PRICE = 2980
-const TEAM_PRICE = 9800
-const PLAN_LIMITS = {
-  free:  { max_interviews: 2,  max_questions: 5,  max_sessions: 20  },
-  pro:   { max_interviews: 10, max_questions: 20, max_sessions: 200 },
-  team:  { max_interviews: 30, max_questions: 20, max_sessions: 1000, team_members: 5 },
-}
-
 export default function HCDStudioPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -55,7 +45,7 @@ export default function HCDStudioPage() {
             <a href="#features"  className="hidden sm:block text-sm text-slate-500 hover:text-slate-700 transition-colors">機能</a>
             <a href="#methods"   className="hidden sm:block text-sm text-slate-500 hover:text-slate-700 transition-colors">分析手法</a>
             <a href="#workflow"  className="hidden sm:block text-sm text-slate-500 hover:text-slate-700 transition-colors">使い方</a>
-            <a href="#pricing"   className="hidden sm:block text-sm text-slate-500 hover:text-slate-700 transition-colors">料金</a>
+            <a href={`${HCD_URL}/pricing`} className="hidden sm:block text-sm text-slate-500 hover:text-slate-700 transition-colors">料金</a>
             <Link href="/" className="hidden sm:block text-sm text-slate-500 hover:text-slate-700 transition-colors">← GURISAN</Link>
             <a href={`${HCD_URL}/login`} className="text-sm font-medium text-slate-600 hover:text-slate-800 transition-colors">ログイン</a>
             <a href={`${HCD_URL}/login?mode=signup`} className="text-sm font-medium px-4 py-1.5 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors">
@@ -98,9 +88,6 @@ export default function HCDStudioPage() {
             <a href={`${HCD_URL}/login`} className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 font-medium rounded-xl hover:bg-slate-50 transition-colors border border-slate-200 shadow-sm">
               ログイン
             </a>
-            <a href={`${HCD_URL}/pricing`} className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-600 font-medium rounded-xl hover:bg-slate-50 transition-colors border border-slate-200 shadow-sm">
-              料金プランを見る
-            </a>
           </div>
         </div>
       </section>
@@ -110,9 +97,21 @@ export default function HCDStudioPage() {
         <div className="max-w-4xl mx-auto">
           <div className="grid sm:grid-cols-3 gap-px bg-slate-100 rounded-2xl overflow-hidden shadow-sm">
             {[
-              { icon: '😓', pain: 'インタビューデータはあるのに、KA法のカード整理だけで数時間…', relief: 'AIが価値の種を自動抽出。分析の起点を即座に生成します。' },
-              { icon: '🤔', pain: '「ユーザー理解できた」と言えるか、いつも自信が持てない。', relief: 'ペルソナ・共感マップ・JTBDをAIが多角的に可視化。腹落ち感のある洞察へ。' },
-              { icon: '😔', pain: '定性データの価値を、経営層や開発チームに伝えられない。', relief: '定量集計と定性分析を統合したレポートを一気に出力。説得力ある資料へ変換。' },
+              {
+                icon: '😓',
+                pain: 'インタビューデータはあるのに、KA法のカード整理だけで数時間…',
+                relief: 'AIが価値の種を自動抽出。グループごとの解説まで即座に生成します。',
+              },
+              {
+                icon: '🤔',
+                pain: '「ユーザー理解できた」と言えるか、いつも自信が持てない。',
+                relief: 'ペルソナ・共感マップ・JTBDをAIが多角的に可視化。腹落ち感のある洞察へ。',
+              },
+              {
+                icon: '😔',
+                pain: '定性データの価値を、経営層や開発チームに伝えられない。',
+                relief: 'グラフ・KA法・AI分析を統合したレポートをワンクリックで出力。説得力ある資料へ変換。',
+              },
             ].map((c, i) => (
               <div key={i} className="bg-white p-6 flex flex-col gap-4">
                 <div className="text-3xl">{c.icon}</div>
@@ -137,12 +136,48 @@ export default function HCDStudioPage() {
           <h2 className="text-3xl font-bold text-slate-800 text-center mb-14">HCD Studioでできること</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: '🎤', title: 'AIインタビュー', desc: 'URLを共有するだけで参加者がAIと1対1のインタビューを実施。自由記述と選択肢を組み合わせた深掘り質問をAIが自動生成します。', color: 'bg-indigo-50 border-indigo-100', iconBg: 'bg-indigo-100' },
-              { icon: '📥', title: '外部データ取り込み', desc: 'Google フォームや既存アンケートのCSVデータをインポートして、同じ分析フローで活用できます。', color: 'bg-violet-50 border-violet-100', iconBg: 'bg-violet-100' },
-              { icon: '🔬', title: 'KA法分析', desc: 'AIが回答から価値の種を自動抽出し、アフィニティダイアグラムを生成。分析対象の設問を自由に選択できます。', color: 'bg-blue-50 border-blue-100', iconBg: 'bg-blue-100' },
-              { icon: '🤖', title: 'AIカスタマイズ分析', desc: 'ペルソナ・カスタマージャーニー・機会領域マップ・JTBDなど13手法のAI分析。独自の分析指示も追加できます。', color: 'bg-emerald-50 border-emerald-100', iconBg: 'bg-emerald-100' },
-              { icon: '📊', title: '定量・定性統合', desc: '選択肢の集計グラフと自由記述の定性分析を同一画面で確認。データの全体像を直感的に把握できます。', color: 'bg-amber-50 border-amber-100', iconBg: 'bg-amber-100' },
-              { icon: '📤', title: 'エクスポート', desc: '回答データをExcel形式でダウンロード。分析レポートはWordまたはPDF（ブラウザ印刷）で出力できます（Proプラン以上）。', color: 'bg-rose-50 border-rose-100', iconBg: 'bg-rose-100' },
+              {
+                icon: '🎤',
+                title: 'AIインタビュー',
+                desc: 'URLを共有するだけで参加者がAIと1対1のインタビューを実施。自由記述と選択肢を組み合わせた深掘り質問をAIが自動生成します。',
+                color: 'bg-indigo-50 border-indigo-100',
+                iconBg: 'bg-indigo-100',
+              },
+              {
+                icon: '📥',
+                title: '外部データ取り込み',
+                desc: 'Google フォームや既存アンケートのCSVデータをインポートして、同じ分析フローで活用できます。',
+                color: 'bg-violet-50 border-violet-100',
+                iconBg: 'bg-violet-100',
+              },
+              {
+                icon: '🔬',
+                title: 'KA法分析',
+                desc: 'AIが回答から価値の種を自動抽出し、アフィニティダイアグラムを生成。グループ別の解説を自動生成し、レポートへの統合もできます。',
+                color: 'bg-blue-50 border-blue-100',
+                iconBg: 'bg-blue-100',
+              },
+              {
+                icon: '🤖',
+                title: 'AIカスタマイズ分析',
+                desc: 'ペルソナ・カスタマージャーニー・機会領域マップ・JTBDなど13手法のAI分析。分析完了後に解説を自動生成し、レポートへ自動保存します。',
+                color: 'bg-emerald-50 border-emerald-100',
+                iconBg: 'bg-emerald-100',
+              },
+              {
+                icon: '📊',
+                title: '定量・定性統合',
+                desc: '選択肢の集計グラフと自由記述の定性分析を同一画面で確認。データの全体像を直感的に把握できます。',
+                color: 'bg-amber-50 border-amber-100',
+                iconBg: 'bg-amber-100',
+              },
+              {
+                icon: '📋',
+                title: '統合レポート生成',
+                desc: 'グラフ・KA法・カスタム分析の結果をバスケットに集め、AIがサマリーを自動生成。WordやExcelで出力してチームに共有できます。',
+                color: 'bg-rose-50 border-rose-100',
+                iconBg: 'bg-rose-100',
+              },
             ].map((f) => (
               <div key={f.title} className={`rounded-2xl p-6 border ${f.color}`}>
                 <div className={`w-10 h-10 ${f.iconBg} rounded-xl flex items-center justify-center text-xl mb-4`}>{f.icon}</div>
@@ -160,7 +195,7 @@ export default function HCDStudioPage() {
           <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">AI ANALYSIS METHODS</p>
           <h2 className="text-3xl font-bold text-slate-800 text-center mb-4">13のAI分析手法</h2>
           <p className="text-center text-slate-500 mb-14 max-w-xl mx-auto">
-            HCDの各フェーズに対応した分析を、インタビューデータから自動生成。 視覚的なマップやキャンバスで直感的に把握できます。
+            HCDの各フェーズに対応した分析を、インタビューデータから自動生成。視覚的なマップやキャンバスで直感的に把握できます。
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mb-10">
             {[
@@ -197,9 +232,27 @@ export default function HCDStudioPage() {
           <h2 className="text-3xl font-bold text-slate-800 text-center mb-14">3ステップで始める</h2>
           <div className="grid sm:grid-cols-3 gap-6">
             {[
-              { step: '01', title: 'インタビューを作成', desc: '調査目的・設問数・収集する参加者情報を設定。AIが必須設問の提案や選択肢の生成もサポートします。', icon: '⚙️', color: 'from-indigo-500 to-indigo-600' },
-              { step: '02', title: 'URLを共有して回答収集', desc: '発行されたURLを参加者に送るだけ。AIが動的に質問を展開し、深みのある回答を引き出します。', icon: '🔗', color: 'from-violet-500 to-violet-600' },
-              { step: '03', title: 'AIが分析・可視化', desc: 'KA法・ペルソナ・機会領域マップなど13手法でAIが即座に分析。ExcelやWordで出力して共有できます。', icon: '✨', color: 'from-emerald-500 to-emerald-600' },
+              {
+                step: '01',
+                title: 'インタビューを作成',
+                desc: '調査目的・設問数・収集する参加者情報を設定。AIが必須設問の提案や選択肢の生成もサポートします。',
+                icon: '⚙️',
+                color: 'from-indigo-500 to-indigo-600',
+              },
+              {
+                step: '02',
+                title: 'URLを共有して回答収集',
+                desc: '発行されたURLを参加者に送るだけ。AIが動的に質問を展開し、深みのある回答を引き出します。',
+                icon: '🔗',
+                color: 'from-violet-500 to-violet-600',
+              },
+              {
+                step: '03',
+                title: 'AIが分析・レポート化',
+                desc: 'KA法・ペルソナ・機会領域マップなど13手法でAIが即座に分析。バスケットに集めてレポートを一括出力できます。',
+                icon: '✨',
+                color: 'from-emerald-500 to-emerald-600',
+              },
             ].map((s) => (
               <div key={s.step} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center text-xl mb-4`}>{s.icon}</div>
@@ -212,68 +265,21 @@ export default function HCDStudioPage() {
         </div>
       </section>
 
-      {/* ── 料金 ── */}
-      <section id="pricing" className="py-24 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">PRICING</p>
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-4">料金プラン</h2>
-          <p className="text-center text-slate-500 mb-14">まずは無料から。プロジェクトの規模に合わせて選べます。</p>
-          <div className="grid sm:grid-cols-3 gap-6 mb-8">
-
-            <div className="rounded-2xl border border-slate-200 p-6">
-              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">FREE</p>
-              <p className="text-3xl font-bold text-slate-800 mb-1">¥0</p>
-              <p className="text-xs text-slate-400 mb-6">ずっと無料</p>
-              <ul className="space-y-2 text-sm text-slate-600 mb-6">
-                <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span>月{PLAN_LIMITS.free.max_interviews}件のプロジェクト</li>
-                <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span>最大{PLAN_LIMITS.free.max_questions}設問 / {PLAN_LIMITS.free.max_sessions}セッション</li>
-                <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span>AIカスタマイズ分析（4手法）</li>
-                <li className="flex items-start gap-2"><span className="text-slate-300 mt-0.5">✗</span><span className="text-slate-400">KA法分析・全AI分析</span></li>
-                <li className="flex items-start gap-2"><span className="text-slate-300 mt-0.5">✗</span><span className="text-slate-400">Excel / Wordエクスポート</span></li>
-              </ul>
-              <a href={`${HCD_URL}/login?mode=signup`} className="block w-full text-center py-2.5 rounded-xl border border-slate-200 text-slate-700 text-sm font-medium hover:bg-slate-50 transition-colors">
-                無料で始める
-              </a>
-            </div>
-
-            <div className="rounded-2xl border-2 border-indigo-500 p-6 relative shadow-lg shadow-indigo-100">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-indigo-600 text-white text-xs font-bold rounded-full">おすすめ</div>
-              <p className="text-xs font-bold text-indigo-500 uppercase tracking-wider mb-2">PRO</p>
-              <p className="text-3xl font-bold text-slate-800 mb-1">¥{PRO_PRICE.toLocaleString()}<span className="text-base font-normal text-slate-500">/月</span></p>
-              <p className="text-xs text-slate-400 mb-6">いつでもキャンセル可</p>
-              <ul className="space-y-2 text-sm text-slate-600 mb-6">
-                <li className="flex items-start gap-2"><span className="text-indigo-500 mt-0.5">✓</span>月{PLAN_LIMITS.pro.max_interviews}件のプロジェクト</li>
-                <li className="flex items-start gap-2"><span className="text-indigo-500 mt-0.5">✓</span>最大{PLAN_LIMITS.pro.max_questions}設問 / {PLAN_LIMITS.pro.max_sessions}セッション</li>
-                <li className="flex items-start gap-2"><span className="text-indigo-500 mt-0.5">✓</span>全AIカスタマイズ分析（13手法）</li>
-                <li className="flex items-start gap-2"><span className="text-indigo-500 mt-0.5">✓</span>KA法分析</li>
-                <li className="flex items-start gap-2"><span className="text-indigo-500 mt-0.5">✓</span>Excel / Wordエクスポート</li>
-              </ul>
-              <a href={`${HCD_URL}/login?mode=signup`} className="block w-full text-center py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700 transition-colors">
-                Proで始める
-              </a>
-            </div>
-
-            <div className="rounded-2xl border border-slate-200 p-6">
-              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">TEAM</p>
-              <p className="text-3xl font-bold text-slate-800 mb-1">¥{TEAM_PRICE.toLocaleString()}<span className="text-base font-normal text-slate-500">/月</span></p>
-              <p className="text-xs text-slate-400 mb-6">5名まで</p>
-              <ul className="space-y-2 text-sm text-slate-600 mb-6">
-                <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span>月{PLAN_LIMITS.team.max_interviews}件のプロジェクト</li>
-                <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span>最大{PLAN_LIMITS.team.max_questions}設問 / {PLAN_LIMITS.team.max_sessions}セッション</li>
-                <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span>Proの全機能</li>
-                <li className="flex items-center gap-2"><span className="text-green-500 mt-0.5">✓</span>チームメンバー{PLAN_LIMITS.team.team_members}名<span className="text-xs bg-amber-100 text-amber-600 px-1.5 py-0.5 rounded font-medium">準備中</span></li>
-                <li className="flex items-center gap-2"><span className="text-green-500 mt-0.5">✓</span>カスタムガイド設定<span className="text-xs bg-amber-100 text-amber-600 px-1.5 py-0.5 rounded font-medium">準備中</span></li>
-              </ul>
-              <a href={`${HCD_URL}/pricing`} className="block w-full text-center py-2.5 rounded-xl border border-slate-200 text-slate-700 text-sm font-medium hover:bg-slate-50 transition-colors">
-                詳細を見る
-              </a>
-            </div>
-
-          </div>
-          <p className="text-center text-sm text-slate-400">
-            Enterprise（無制限・カスタム契約）は
-            <a href="mailto:info@gurisanws.com" className="text-indigo-500 hover:underline ml-1">お問い合わせ</a>ください。
+      {/* ── 料金プランへの誘導 ── */}
+      <section className="py-16 px-6 bg-white border-t border-slate-100">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">PRICING</p>
+          <h2 className="text-2xl font-bold text-slate-800 mb-3">まずは無料から始められます</h2>
+          <p className="text-slate-500 mb-8 leading-relaxed">
+            Freeプランはクレジットカード不要でずっと無料。<br className="hidden sm:block" />
+            本格的なリサーチには ProプランまたはTeamプランをご活用ください。
           </p>
+          <a
+            href={`${HCD_URL}/pricing`}
+            className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 text-white font-semibold rounded-xl hover:bg-slate-700 transition-colors shadow-sm"
+          >
+            料金プランを見る →
+          </a>
         </div>
       </section>
 
@@ -314,7 +320,7 @@ export default function HCDStudioPage() {
             <a href="#features" className="hover:text-slate-200 transition-colors">機能</a>
             <a href="#methods"  className="hover:text-slate-200 transition-colors">分析手法</a>
             <a href="#workflow" className="hover:text-slate-200 transition-colors">使い方</a>
-            <a href="#pricing"  className="hover:text-slate-200 transition-colors">料金</a>
+            <a href={`${HCD_URL}/pricing`} className="hover:text-slate-200 transition-colors">料金</a>
             <Link href="/" className="hover:text-slate-200 transition-colors">GURISAN</Link>
           </div>
           <p className="text-xs text-slate-600">© 2026 GURISAN. All Rights Reserved.</p>
