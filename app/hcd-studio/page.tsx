@@ -322,6 +322,7 @@ export default function HCDStudioPage() {
             <a href="#workflow" className="hover:text-slate-200 transition-colors">使い方</a>
             <a href={`${HCD_URL}/pricing`} className="hover:text-slate-200 transition-colors">料金</a>
             <Link href="/" className="hover:text-slate-200 transition-colors">GURISAN</Link>
+            <Link href="/tokushoho" className="hover:text-slate-200 transition-colors text-slate-500">特定商取引法</Link>
           </div>
           <p className="text-xs text-slate-600">© 2026 GURISAN. All Rights Reserved.</p>
         </div>

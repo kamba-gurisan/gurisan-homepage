@@ -496,6 +496,7 @@ export default function Home() {
             <a href="#achievements" className="hover:text-white transition-colors">実績</a>
             <a href="#hcd-studio"   className="hover:text-white transition-colors">ツール</a>
             <a href="#contact"      className="hover:text-white transition-colors">お問い合わせ</a>
+            <Link href="/tokushoho" className="hover:text-white transition-colors text-green-400">特定商取引法</Link>
           </div>
           <p className="text-xs text-green-600">© 2026 GURISAN. All Rights Reserved.</p>
         </div>
