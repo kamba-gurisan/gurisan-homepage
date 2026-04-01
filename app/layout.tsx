@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/next';
 
@@ -34,7 +35,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>{children}<Analytics /></body>
+      <body className="pb-12">
+        {children}
+        <footer className="fixed bottom-0 w-full z-30 py-3 text-center text-xs text-slate-400 border-t border-slate-100 bg-white/80 backdrop-blur-md">
+          © 2026 GURISAN. All Rights Reserved.
+          <span className="mx-2">·</span>
+          <Link href="/tokushoho" className="hover:text-slate-600 transition-colors">特定商取引法</Link>
+          <span className="mx-2">·</span>
+          <a href="#contact" className="hover:text-slate-600 transition-colors">お問い合わせ</a>
+        </footer>
+        <Analytics />
+      </body>
     </html>
   );
 }
