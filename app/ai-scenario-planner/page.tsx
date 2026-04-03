@@ -138,7 +138,7 @@ export default function AIScenarioPlannerPage() {
             {[
               {
                 icon: '🎯',
-                title: '2&times;2 シナリオマトリクス',
+                title: '2×2 シナリオマトリクス',
                 desc: 'AIが2つの不確実性軸を自動設定し、4つの象限に異なる未来シナリオを生成。構造化された戦略思考を実現します。',
                 color: 'bg-teal-50 border-teal-100',
                 iconBg: 'bg-teal-100',
@@ -181,7 +181,7 @@ export default function AIScenarioPlannerPage() {
             ].map((f) => (
               <div key={f.title} className={`rounded-2xl p-6 border ${f.color}`}>
                 <div className={`w-10 h-10 ${f.iconBg} rounded-xl flex items-center justify-center text-xl mb-4`}>{f.icon}</div>
-                <h3 className="font-bold text-slate-800 mb-2" dangerouslySetInnerHTML={{ __html: f.title }} />
+                <h3 className="font-bold text-slate-800 mb-2">{f.title}</h3>
                 <p className="text-sm text-slate-500 leading-relaxed">{f.desc}</p>
               </div>
             ))}
